@@ -44,3 +44,16 @@ Run it:
 ```shell
 docker run --rm -it -v "$PWD/sqls:/app/sqls:ro" --env-file .env db2prompy
 ```
+
+Inside db2prompy, run hello.sql file in database:
+```txt
+Type password for user db2inst1: 
+Connected to 127.0.0.1:50000/sample as db2inst1
+Welcome! Type ? to list commands
+db2prompy> ls
+SQL files available:
+- hello.sql
+db2prompy> execf hello.sql
+HELLO WORLD
+db2prompy> exit
+```
